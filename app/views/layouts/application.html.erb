@@ -8,10 +8,16 @@
     <%= render "layouts/shim" %>
   </head>
   <body>
+    <%= link_to "English", locale:"en" %>
+    <%= link_to "Vietnamese", locale:"vi" %>
     <%= render "layouts/header" %>
+
     <div class="container">
+      <% flash.each do |message_type, message| %>
+        <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+      <% end %>
       <%= yield %>
-      <%= render 'layouts/footer' %>
+      <%= render "layouts/footer" %>
     </div>
   </body>
 </html>
