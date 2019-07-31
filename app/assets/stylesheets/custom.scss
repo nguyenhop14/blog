@@ -258,6 +258,12 @@ input {
       padding: 5px 0;
     }
   }
+  .title {
+    display: block;
+    margin-left: 60px;
+    font-size: 20px
+  }
+
   .timestamp {
     color: $gray-light;
     display: block;

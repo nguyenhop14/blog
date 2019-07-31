@@ -13,3 +13,10 @@ User.create!(name:  "Example User",
                password:              password,
                password_confirmation: password)
 end
+
+users = User.order(:created_at).take(6)
+20.times do
+  title = Faker::Lorem.sentence(5)
+  body = Faker::Lorem.sentence(10)
+  users.each { |user| user.entries.create!(title: title, body: body) }
+end
