@@ -1,0 +1,36 @@
+<% provide :title, @entry.user.name %>
+<div class="row">
+  <aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @entry.user %>
+        <%= @entry.user.name %>
+      </h1>
+    </section>
+    <section class="stats">
+
+    </section>
+  </aside>
+  <div class="col-md-8">
+
+      <ol class="microposts">
+        <%= render @entry %>
+        <% if @entry.comments.any? %>
+          <h3>Comments (<%= @entry.comments.count %>)</h3>
+            <ol class="microposts">
+              <div class="div-create">
+                <%= render @comments %>
+              </div>
+            </ol>
+            <%= will_paginate @comments %>
+        <% end %>
+        <% if logged_in? %>
+          <div class="ajax-form-create">
+            <section class="micropost_form">
+              <%= render "comments/comment_form" %>
+            </section>
+          </div>
+        <% end %>
+      </ol>
+  </div>
+</div>

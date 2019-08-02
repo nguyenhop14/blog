@@ -16,7 +16,12 @@ class EntriesController < ApplicationController
   def destroy
     @entry.destroy
     flash[:success] = "Micropost deleted"
-    redirect_to request.referrer || root_path
+    redirect_to  root_path
+  end
+
+  def show
+    @entry = Entry.find_by id: params[:id]
+    @comments = @entry.comments.paginate(page: params[:page], per_page: 5)
   end
 
   private
