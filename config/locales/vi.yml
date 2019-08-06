@@ -1,1 +1,106 @@
 vi:
+  static_pages:
+    about:
+      title: "Về chúng tôi"
+
+    contact:
+      title: "Liên hệ"
+      tutorial: "Ruby on Rails"
+      intro: "Đây là ứng dụng mẫu cho hướng dẫn này"
+
+    help:
+      title: "Trợ giúp"
+
+    home:
+      title: "Trang chủ"
+      feed: "Bảng tin"
+      blog: "Blog"
+      welcome: "Chào mừng đến với Blog"
+      signup: "Đăng kí ngay!"
+      intro: "Đây là trang chủ của"
+      tutorial: "Ruby on Rails Tutorial"
+      app: "blog demo"
+
+  sessions:
+    new:
+      title: "Đăng nhập"
+      email: "email"
+      password: "mật khẩu"
+      remember: "Nhớ mật khẩu"
+      signup: "Đăng ký ngay!"
+      user: "Tài khoản mới?"
+
+  users:
+    index:
+      title: "Tất cả tài khoản"
+
+    new:
+      title: "Đăng ký"
+      button: "Tạo tài khoản"
+
+    show:
+      entries: "Bài viết"
+
+    edit:
+      title: "Chỉnh sửa tài khoản"
+      button: "Lưu thay đổi"
+      update: "Cập nhật hồ sơ"
+      change: "Thay đôi"
+
+    show_follow:
+      micropost: "Bài viết"
+      view: "Tài khoản của tôi"
+
+    sure: "Bạn đã chắc chắn?"
+    follow: "Theo dõi"
+    unfollow: "Bỏ theo dõi"
+    email: "email"
+    password: "mật khẩu"
+    name: "Tên"
+    password_confirmation: "Nhập lại mật khẩu"
+
+  layouts:
+    footer:
+      about: "về chúng tôi"
+      contact: "Liên hệ"
+      news: "Bản tin"
+
+    header:
+      home: "Trang chủ"
+      help: "Trợ giúp"
+      users: "Người dùng"
+      account: "Tài khoản"
+      profile: "Hồ sơ"
+      settings: "Cài đặt"
+      logout: "Đăng xuất"
+      login: "Đăng nhập"
+
+    application:
+      en: "Tiếng Anh"
+      vi: "Tiếng Việt"
+
+  entries:
+    entry:
+      posted: "Đã đăng"
+      ago: "trước"
+      delete: "xóa"
+      sure: "Bạn đã chắc chắn?"
+
+    show:
+      comment: "Bình luận"
+
+  shared:
+    _entry:
+      title: "tiêu đề"
+      body: "Nội dung"
+      post: "Đăng"
+
+    error:
+      contains: "Trong biểu mẫu chứa"
+
+    stats:
+      following: "đang theo dõi"
+      followers: "người theo dõi"
+
+    user_info:
+      view: "tài khoản của tôi"

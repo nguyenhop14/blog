@@ -15,17 +15,24 @@
 
       <ol class="microposts">
         <%= render @entry %>
-        <% if @entry.comments.any? %>
-          <h3>Comments (<%= @entry.comments.count %>)</h3>
+        <h3><%= t "entries.show.comment" %></h3>
+          <div id="div-create" >
+          <% if @entry.comments.any? %>
             <ol class="microposts">
-              <div class="div-create">
                 <%= render @comments %>
-              </div>
             </ol>
-            <%= will_paginate @comments %>
-        <% end %>
+          <% end %>
+          </div>
+          <div id="paginate">
+            <% if @entry.comments.any? %>
+              <%= will_paginate @comments, remote: true %>
+            <% end %>
+          </div>
+
+
+
         <% if logged_in? %>
-          <div class="ajax-form-create">
+          <div id="ajax-form-create">
             <section class="micropost_form">
               <%= render "comments/comment_form" %>
             </section>

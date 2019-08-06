@@ -7,10 +7,10 @@
     <%= image_tag entry.picture.url if entry.picture? %>
   </span>
   <span class="timestamp">
-    Posted <%= time_ago_in_words(entry.created_at) %> ago.
+    <%= t "entries.entry.posted" %> <%= time_ago_in_words(entry.created_at) %> <%= t "entries.entry.ago" %>.
     <% if logged_in? %>
       <% if current_user?(entry.user) %>
-        <%= link_to "delete", entry, method: :delete, data: { confirm: "You sure?" } %>
+        <%= link_to t("entries.entry.delete"), entry, method: :delete, data: { confirm: t("entries.entry.sure") } %>
       <% end %>
     <% end %>
   </span>

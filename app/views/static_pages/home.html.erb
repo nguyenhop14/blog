@@ -1,4 +1,4 @@
-<% provide(:title, "Home") %>
+<% provide :title, t("static_pages.home.title") %>
 
 <% if logged_in? %>
   <div class="row">
@@ -14,23 +14,23 @@
       </section>
     </aside>
     <div class="col-md-8">
-      <h3>Micropost Feed</h3>
+      <h3><%= t "static_pages.home.feed" %></h3>
       <%= render "shared/feed" %>
     </div>
   </div>
 <% else %>
 
-  <h1>Blog</h1>
+  <h1><%= t "static_pages.home.blog" %></h1>
   <div class="center jumbotron">
-    <h1>Welcome to the Sample App</h1>
+    <h1><%= t "static_pages.home.welcome" %></h1>
 
     <h2>
-      This is the home page for the
-      <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
+      <%= t "static_pages.home.intro" %>
+      <%= link_to t("static_pages.home.tutorial"), "https://www.railstutorial.org/" %>
+      <%= t "static_pages.home.app" %>.
     </h2>
 
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+    <%= link_to t("static_pages.home.signup"), signup_path, class: "btn btn-lg btn-primary" %>
   </div>
 <% end %>
 

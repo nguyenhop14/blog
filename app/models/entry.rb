@@ -10,7 +10,6 @@ class Entry < ApplicationRecord
   validates :body, presence: true
   validate  :picture_size
 
-
   private
     def picture_size
       if picture.size > 5.megabytes
