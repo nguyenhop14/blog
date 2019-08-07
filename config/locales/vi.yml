@@ -104,3 +104,8 @@ vi:
 
     user_info:
       view: "tài khoản của tôi"
+
+  _comments:
+    _form:
+      content: "Bình luận"
+

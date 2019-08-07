@@ -104,3 +104,8 @@ en:
 
     user_info:
       view: "view my profile"
+
+  _comments:
+    _form:
+      content: "comment"
+

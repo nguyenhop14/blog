@@ -11,7 +11,6 @@ class CommentsController < ApplicationController
         format.js
       end
     else
-      flash[:danger] = "Comment!"
       redirect_to root_path
     end
   end
@@ -19,19 +18,13 @@ class CommentsController < ApplicationController
   def destroy
     @comment.destroy
     flash[:success] = "Comment deleted"
-    redirect_to entry_path id: @comment.entry_id
-    # respond_to do |format|
-    #   format.html { redirect_to entry_path(id: @comment.entry_id) }
-    #   format.js
-    # end
+    respond_to do |format|
+      format.html { redirect_to entry_path id: @comment.entry_id }
+      format.js
+    end
   end
 
-  # def index
-  #   @comments = Comment.find_by :entry_id: params[:entry_id]
-  # end
-
   private
-
     def comment_params
       (params.require(:comment).permit(:content)).merge({entry_id: params[:entry_id]})
     end

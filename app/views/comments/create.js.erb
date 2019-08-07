@@ -1,5 +1,5 @@
-$('#div-create').html('<%= j render @comments %>').appendTo('#div-create');
+$('#div-create').html('<%= j render @comments %>')
 
-$('#paginate').html('<%= will_paginate @comments, :params => {:entry_id => 123} %>');
+$('#paginate').html('<%= will_paginate @comments %>');
 
 $('#ajax-form-create').html('<%= escape_javascript(render('comments/comment_form')) %>')

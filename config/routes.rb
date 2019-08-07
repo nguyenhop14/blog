@@ -23,7 +23,7 @@ Rails.application.routes.draw do
     resources :entries do
       resources :comments
     end
-    resources :relationships,       only: [:create, :destroy]
+    resources :relationships, only: [:create, :destroy]
     resources :comments
   end
 end
