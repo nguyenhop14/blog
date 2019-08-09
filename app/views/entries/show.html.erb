@@ -18,18 +18,20 @@
         <h3><%= t "entries.show.comment" %></h3>
           <div id="div-create" >
           <% if @entry.comments.any? %>
+            <div id="div-destroy">
             <ol class="microposts">
                 <%= render @comments %>
             </ol>
+          </div>
           <% end %>
           </div>
           <div id="paginate">
             <% if @entry.comments.any? %>
-              <%= will_paginate @comments, remote: true %>
+              <div id="paginate1">
+                <%= will_paginate @comments, remote: true %>
+              </div>
             <% end %>
           </div>
-
-
 
         <% if logged_in? %>
           <div id="ajax-form-create">

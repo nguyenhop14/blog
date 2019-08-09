@@ -1,0 +1,13 @@
+_models:
+  user:
+    name: 50
+    email: 140
+    password: 6
+    email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i'
+
+_helpers:
+  ava_size: 80
+
+_controllers:
+  entries:
+    per_comments: 5

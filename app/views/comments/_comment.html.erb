@@ -6,7 +6,7 @@
     Posted <%= time_ago_in_words(comment.created_at) %> ago.
     <% if logged_in? %>
       <% if current_user?(comment.user) %>
-        <%= link_to "delete", comment, method: :delete, data: { confirm: "sure?" }%>
+        <%= link_to "delete", comment, method: :delete, data: { confirm: "sure?" }, remote: true %>
       <% end %>
     <% end %>
   </span>

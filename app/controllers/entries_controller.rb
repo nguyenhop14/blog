@@ -1,6 +1,6 @@
 class EntriesController < ApplicationController
-  before_action :logged_in_user, only: [:create, :destroy]
-  before_action :correct_user, only: :destroy
+  before_action :logged_in_user, only: %i{create, destroy}
+  before_action :correct_user, only: %i{destroy}
 
   def create
     @entry = current_user.entries.build(entry_params)

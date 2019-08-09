@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
   scope "(:locale)", locale: /en|vi/ do
     root "static_pages#home"
 
@@ -9,6 +8,7 @@ Rails.application.routes.draw do
     get "/contact", to: "static_pages#contact"
     get "/signup", to: "users#new"
     get "/login", to: "sessions#new"
+    get "sessions/new"
 
     post "/login", to: "sessions#create"
     post "/signup", to: "users#create"
@@ -23,7 +23,7 @@ Rails.application.routes.draw do
     resources :entries do
       resources :comments
     end
-    resources :relationships,       only: [:create, :destroy]
+    resources :relationships, only: [:create, :destroy]
     resources :comments
   end
 end

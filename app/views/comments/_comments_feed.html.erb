@@ -1,0 +1,7 @@
+<% if @entry.comments.any? %>
+  <div class="div-destroy">
+    <ol class="microposts">
+        <%= render @comments %>
+    </ol>
+  </div>
+<% end %>

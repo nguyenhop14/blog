@@ -1,3 +1,2 @@
-$("#div-create").html("<%= j render @comments %>")
-
-$('#paginate').html('<%= will_paginate @comments, remote: true %>')
+$('#div-create').html('<%= j render @comments %>')
+$('#paginate').html('<%= will_paginate @comments %>');
