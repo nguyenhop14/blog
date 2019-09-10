@@ -1,6 +1,6 @@
 class Entry < ApplicationRecord
   belongs_to :user
-  default_scope -> { order(created_at: :desc) }
+
   has_many :comments, dependent: :destroy
 
   mount_uploader :picture, PictureUploader
@@ -9,6 +9,8 @@ class Entry < ApplicationRecord
   validates :title, presence: true, length: { maximum: 140 }
   validates :body, presence: true
   validate  :picture_size
+
+  default_scope -> { order(created_at: :desc) }
 
   private
     def picture_size

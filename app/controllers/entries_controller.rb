@@ -20,6 +20,7 @@ class EntriesController < ApplicationController
   end
 
   def show
+    #byebug
     @entry = Entry.find_by id: params[:id]
     @comments = @entry.comments.paginate(page: params[:page], per_page: 5)
   end

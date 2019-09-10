@@ -15,12 +15,12 @@ port        ENV.fetch("PORT") { 3000 }
 #
 environment ENV.fetch("RAILS_ENV") { "development" }
 
-on_worker_boot do
-  # Worker specific setup for Rails 4.1+
-  # See: https://devcenter.heroku.com/articles/
-  # deploying-rails-applications-with-the-puma-web-server#on-worker-boot
-  ActiveRecord::Base.establish_connection
-end
+# on_worker_boot do
+#   # Worker specific setup for Rails 4.1+
+#   # See: https://devcenter.heroku.com/articles/
+#   # deploying-rails-applications-with-the-puma-web-server#on-worker-boot
+#   ActiveRecord::Base.establish_connection
+# end
 
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked webserver processes. If using threads and workers together

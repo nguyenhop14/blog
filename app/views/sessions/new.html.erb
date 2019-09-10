@@ -20,6 +20,10 @@
     <% end %>
 
     <p>
+      <%= link_to "Log in with Facebook" , "/auth/facebook", id: "sign_in" %>
+    </p>
+
+    <p>
       <%= t "sessions.new.user" %>
       <%= link_to t("sessions.new.signup"), signup_path %>
     </p>

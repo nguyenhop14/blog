@@ -23,6 +23,8 @@ gem "carrierwave"
 gem "mini_magick"
 gem "kaminari"
 gem "bootstrap-kaminari-views"
+gem "omniauth"
+gem "omniauth-facebook"
 
 group :development, :test do
   gem "sqlite3"

@@ -27,6 +27,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def self.form_omniauth(auth_hash)
+    user = find_or_create_by(id: auth_hash["id"])
+    user.name = auth_hash["info"]["name"]
+    user.email = auth_hash["info"]["email"]
+    user.password = "123456"
+    user.password_confirmation = "123456"
+    user.save!
+    user
+  end
+
+
   def edit
     @user = User.find_by id: params[:id]
   end

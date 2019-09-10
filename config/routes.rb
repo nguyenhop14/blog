@@ -9,6 +9,8 @@ Rails.application.routes.draw do
     get "/signup", to: "users#new"
     get "/login", to: "sessions#new"
     get "sessions/new"
+    get "/auth/facebook", to: "sessions#create"
+    get "auth/failure", to: "sessions#failure"
 
     post "/login", to: "sessions#create"
     post "/signup", to: "users#create"
