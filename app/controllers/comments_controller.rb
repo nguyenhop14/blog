@@ -19,7 +19,6 @@ class CommentsController < ApplicationController
 
   def destroy
     @comment.destroy
-    # flash[:success] = "Comment deleted"
     respond_to do |format|
       format.html { redirect_to entry_path id: @comment.entry_id }
       format.js

@@ -1,3 +1,6 @@
 $('#div-create').html('<%= j render @comments %>')
 $('#paginate').html('<%= will_paginate @comments, params: {controller: "entries", action: "show", id: @comment.entry_id, page: params[:page] } %>');
 $('#ajax-form-create').html('<%= j render('comments/comment_form') %>');
+
+
+
